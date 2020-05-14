@@ -17,9 +17,9 @@ EOF
 ts-node --version | grep 'v8' || exit 1
 
 cat <<EOF
-==> test aws-cdk 1.19.x
+==> test aws-cdk 1.38.x
 EOF
-cdk --version | grep '1.19.[0-9]' || exit 1
+cdk --version | grep '1.38.[0-9]' || exit 1
 
 cat <<EOF
 ==> test aws-cli 1.16.x

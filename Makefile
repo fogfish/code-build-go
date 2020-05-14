@@ -15,6 +15,11 @@ build: Dockerfile
 	@docker build -t ${IID} - < $^
 	@docker tag ${IID} ${LOCAL}
 
+clean:
+	-@docker rmi ${LOCAL}
+	-@docker rmi ${TEST}
+	-@docker rmi ${IID}
+
 test:
 	@docker build -t ${TEST} test
 	@docker run --rm --privileged ${TEST}
